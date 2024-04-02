@@ -132,14 +132,14 @@ const showWinner=(userWinnner, userChoice, compChoice)=>{
     if(userWinnner){
         userScore++;
         userScoreUpdate.innerText=userScore;
-        message.innerText=`You get point`;
+        message.innerText=`You get point. ${userChoice} beats ${compChoice}`;
         message.style.backgroundColor="green";
         scoreSound.play();
     }else{
         scoreSound.play();
         compScore++;
         compScoreUpdate.innerText=compScore;
-        message.innerText=`Computer get point`;
+        message.innerText=`Computer get point. ${compChoice} beats your ${userChoice}`;
         message.style.backgroundColor="red";
     }
     if(userScore===20){
